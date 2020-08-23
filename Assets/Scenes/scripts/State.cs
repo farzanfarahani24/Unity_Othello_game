@@ -11,11 +11,9 @@ using UnityEngine.SceneManagement;
 
 class State
 {
-    //public GameObject winningCond;
     public Board b = new Board();
     public int player;
-    // public int whiteScore;
-    // public int blackScore;
+
    
 
     public State()
@@ -106,7 +104,7 @@ class State
     }
 
 
-    public String ajab(){
+    public String Winner(){
          State opposite = new State(this.b,-player);
          if(possibleMoves().Count == 0 && opposite.possibleMoves().Count== 0 && b.nWhite() > b.nBlack()){
              return "White";}
@@ -120,31 +118,19 @@ class State
     public void GameOver(){
         State opposite = new State(this.b,-player);
         if(possibleMoves().Count == 0 && opposite.possibleMoves().Count== 0 && b.nWhite() > b.nBlack()){
-           //winningCond.GetComponent<Text>().text = "winner : White" ;
-          // return "White";
             System.Threading.Thread.Sleep(3000);
             SceneManager.LoadScene("gameoverW");
         }
         else if(possibleMoves().Count == 0 && opposite.possibleMoves().Count== 0 && b.nWhite() < b.nBlack()){
-         //return "Black";
-         // winningCond.GetComponent<Text>().text = "winner : Black" ;
             System.Threading.Thread.Sleep(3000);
             SceneManager.LoadScene("gameoverB");
         }
         else if(possibleMoves().Count == 0 && opposite.possibleMoves().Count== 0 && b.nWhite() == b.nBlack()){
-          //  return "Equal";
             System.Threading.Thread.Sleep(3000);
             SceneManager.LoadScene("gameoverEqual");
         }
-        //     if(b.nWhite() > b.nBlack()){
-        //          return "White";
-        //     }else if (b.nWhite() < b.nBlack()){
-        //         return "Black";
-        // //     }
-         
-     
-                
-      //return "None";
+       
+
     
 }
    
