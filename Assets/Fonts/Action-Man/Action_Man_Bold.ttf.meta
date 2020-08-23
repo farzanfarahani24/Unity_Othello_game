@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 6fd8bb8354e41784bbf9fc1db2f7c29f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Action Man
+  fontNames:
+  - Action Man
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fc5a6ba167bec254093aad8178b9d84a, type: 3}
+  - {fileID: 12800000, guid: 202c7945f7e25164981d420aafb75357, type: 3}
+  - {fileID: 12800000, guid: c095eb0b067d13743b38a9f23577b69c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
