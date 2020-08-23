@@ -1,5 +1,5 @@
 # Unity_Othello_game
-a simple othello game by Unity2D 
+a 2D othello game by Unity C# 
 ## summary
 This project includes 3 main classes :
 
