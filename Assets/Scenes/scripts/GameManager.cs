@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     State s = new State();
     int player;
     bool h = false;
-	public GameObject nWhite;
-	public GameObject nBlack;
+    public GameObject nWhite;
+    public GameObject nBlack;
     public GameObject turn;
     public GameObject winningCond;
     public AudioSource firstPlayer;
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 		nWhite.GetComponent<Text>().text =  s.b.nWhite().ToString();
 		nBlack.GetComponent<Text>().text =   s.b.nBlack().ToString();
         turn.GetComponent<Text>().text =  s.turnn();
-        winningCond.GetComponent<Text>().text = "winner : " + s.ajab();
+        winningCond.GetComponent<Text>().text = "winner : " + s.Winner();
 
       
 
@@ -61,15 +61,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         StartCoroutine(Move());
-       
-       // yield return new WaitForSeconds(1);
-        //s.GameOver();
     }
 
     IEnumerator Move()
     {
-		if (Input.GetMouseButtonDown(0) && s.possibleMoves ().Count != 0)
-		{
+	if (Input.GetMouseButtonDown(0) && s.possibleMoves ().Count != 0)
+	{
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
             if (hit.collider != null)
